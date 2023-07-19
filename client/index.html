@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRM-система</title>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/media.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="header-box">
+        <img class="logo" src="img/skb.png" alt="логотип">
+        <form class="form">
+          <input class="input-search" type="text" name="name" autocomplete="off" data-validate-field="name" placeholder="Введите запрос">
+        </form>
+      </div>
+    </header>
+    <div class="clients-box">
+      <h1 class="title">Клиенты</h1>
+      <div class="table__wrapper">
+        <table class="table-clients" cellpadding="0" cellspacing="0">
+          <thead class="table-title">
+            <tr>
+              <th data-column="id">
+                <button class="id-btn btn sort">ID<img class="arrow-up" src="img/arrow-up.svg">
+                </button>
+              </th>
+              <th data-column="fio">
+                <button class="fio-title btn sort">Фамилия Имя Отчество
+                  <img class="arrow-down" src="img/arrow-down.svg"><span class="fio-btn">А-Я</span>
+                </button>
+              </th>
+              <th data-column="make">
+                <button class="btn make-title sort">
+                  <div>
+                    <span>Дата и время</span>
+                    <span>создания
+                      <img class="arrow-down" src="img/arrow-down.svg">
+                    </span>
+                  </div>
+                </button>
+              </th>
+              <th data-column="edit">
+                <button class="btn sort edit-title">
+                  <div>
+                    <span>Последние</span>
+                    <span>изменения
+                      <img class="arrow-down" src="img/arrow-down.svg">
+                    </span>
+                  </div>
+                </button>
+              </th>
+              <th data-column="contacts" class="contacts-title">Контакты</th>
+              <th data-column="active" class="actions-title">Действия</th>
+            </tr>
+          </thead>
+          <tbody id="clients-list">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="add-box">
+      <button class="add-client btn">
+        <svg width="23" height="16" viewbox="0 0 23 16" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.5 8C16.71 8 18.5 6.21 18.5 4C18.5 1.79 16.71 0 14.5 0C12.29 0 10.5 1.79 10.5 4C10.5 6.21 12.29 8 14.5 8ZM5.5 6V3H3.5V6H0.5V8H3.5V11H5.5V8H8.5V6H5.5ZM14.5 10C11.83 10 6.5 11.34 6.5 14V16H22.5V14C22.5 11.34 17.17 10 14.5 10Z"/>
+        </svg>
+        <span class="add">Добавить клиента</span>
+      </button>
+    </div>
+  </div>
+  <script defer type="module" src="js/main.js"></script>
+</body>
+</html>
